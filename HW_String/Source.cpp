@@ -15,6 +15,19 @@ int polindrom(string word) {
 		return true;
 	}
 }
+int polindromStr(string s) {
+	string s2 = s;
+	int s1 = s.length();
+	int n = s1 - 1;
+	for (int i = 0; i < (s1 / 2); i++) {
+		swap(s[i], s[n]);
+		n -= 1;
+	}
+	if (s2 == s)
+		return true;
+	else
+		return false;
+}
 
 int find(string w) {
 	
@@ -46,14 +59,11 @@ cout << "Новая строка = " << res << endl;
 cout << "Задача 2\n";
 cout << "Введите слово: ";
 getline(cin,str);
-if (polindrom(str) != 0)
-cout << "TRUE";
-else
-cout << "FALSE";
-cout << endl;
+(polindromStr(str) == 1) ? cout << "TRUE"<<endl : cout << "FALSE" <<endl;
 
 
-cout << "Задача 3\n";
+
+cout <<"Задача 3\n";
 cout<<"Введите строку: ";
 getline(cin, str);
 cout<<find(str);
