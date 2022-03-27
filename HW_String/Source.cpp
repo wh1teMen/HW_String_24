@@ -4,17 +4,7 @@
 #include<string>
 using namespace std;
 //Функция нахождения полиндрома в строке
-int polindrom(string word) {
-	int s = word.length();
-	for (int i = 0; i < s; i++)
-		word[i] = toupper(word[i]);
-	for (int i = 0; i < s / 2; i++) {
-		if (word[i] != word[s - i - 1]) {
-			return false;
-		}
-		return true;
-	}
-}
+
 int polindromStr(string s) {
 	string s2 = s;
 	int s1 = s.length();
